@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,800;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Mulish', sans-serif;
+}
+
+.wrapper {
+    width: 60%;
+    margin: 30px auto;
+}
+
+/* HEADER */
+.bmi-calculator-header {
+    padding: 2%;
+}
+
+.bmi-calculator-header .title {
+    text-align: center;
+    font-size: 40px;
+}
+
+@media (max-width: 301px) and (orientation: portrait) {
+    .bmi-calculator-header .title {
+        font-size: 30px;
+    }
+}
+
+/* MAIN */
+.wrapper main {
+    padding: 3%;
+    border-top: 1px solid #949494;
+    border-bottom: 1px solid #949494;
+}
+
+.wrapper main>* {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper main .input-section>* {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper main .input-section .labels-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 10px;
+}
+
+.wrapper main .input-section .labels-container label {
+    font-size: 20px;
+}
+
+.wrapper main .input-section .inputs-container input {
+    margin: 2px 0;
+    padding: 2px 5px;
+    font-size: 18px;
+}
+
+.wrapper main .input-section .inputs-container input::placeholder {
+    text-align: right;
+
+}
+
+.wrapper main .button-container {
+    margin-top: 5%;
+}
+
+.wrapper main .button-container>* {
+    padding: 5px 10px;
+    font-size: 20px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.wrapper main .button-container .calculate-bmi {
+    margin-right: 10px;
+    background-color: rgb(100, 205, 100);
+}
+
+.wrapper main .button-container .calculate-bmi:hover {
+    background-color: rgb(77, 157, 77);
+}
+
+.wrapper main .button-container .clear-inputs {
+    margin-left: 10px;
+    background-color: rgb(209, 103, 103);
+}
+
+.wrapper main .button-container .clear-inputs:hover {
+    background-color: rgb(139, 69, 69);
+}
+
+@media(max-width: 1024px) {
+    .wrapper {
+        width: 80%;
+    }
+
+    .wrapper main {
+        padding: 5%;
+    }
+}
+
+@media(max-width: 768px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .wrapper main {
+        padding: 8%;
+    }
+}
+
+@media (max-width: 301px) and (orientation: portrait) {
+    .wrapper main .input-section .labels-container label {
+        font-size: 16px;
+    }
+
+    .wrapper main .input-section .inputs-container input {
+        padding: 1px 4px;
+        font-size: 16px;
+    }
+
+    .wrapper main .button-container {
+        margin-top: 10%;
+    }
+}
+
+/* FOOTER */
+.result-container.enable {
+    display: block;
+}
+
+.result-container {
+    display: none;
+    padding: 2%;
+}
+
+.result-container .result-description {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.result-container .result-description p {
+    font-size: 18px;
+}
+
+.result-container .result-description p .bmi-index {
+    font-weight: bold;
+}
+
+.result-container .result-description .prompt {
+    font-style: italic;
+}
+
+@media(max-width: 768px) {
+    .result-container .result-description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 301px) and (orientation: portrait) {
+    .result-container .result-description p {
+        font-size: 16px;
+    }
+}
